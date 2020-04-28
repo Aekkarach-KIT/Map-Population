@@ -1,0 +1,4 @@
+https://getbootstrap.com/docs/4.1/components/carousel/
+
+
+https://openlayers.org/en/latest/examples/animation.html
