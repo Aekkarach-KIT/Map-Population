@@ -29,7 +29,7 @@
     ],
     "homepage": "https://startbootstrap.com/templates/sb-admin",
     "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-sb-admin/issues",
+        "url": "https://github.com/Aekkarach-KIT/Project-Map.git",
         "email": "feedback@startbootstrap.com"
     },
     "license": "MIT",
@@ -39,7 +39,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-sb-admin.git"
+        "url": "https://github.com/Aekkarach-KIT/Project-Map.git"
     },
     "dependencies": {
         "bootstrap": "4.4.1",
