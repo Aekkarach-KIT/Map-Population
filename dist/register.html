@@ -1,72 +1,146 @@
-<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Page Title - SB Admin</title>
-        <link href="css/styles.css" rel="stylesheet" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
-    </head>
-    <body class="bg-primary">
-        <div id="layoutAuthentication">
-            <div id="layoutAuthentication_content">
-                <main>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-7">
-                                <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Create Account</h3></div>
-                                    <div class="card-body">
-                                        <form>
-                                            <div class="form-row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group"><label class="small mb-1" for="inputFirstName">First Name</label><input class="form-control py-4" id="inputFirstName" type="text" placeholder="Enter first name" /></div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group"><label class="small mb-1" for="inputLastName">Last Name</label><input class="form-control py-4" id="inputLastName" type="text" placeholder="Enter last name" /></div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group"><label class="small mb-1" for="inputEmailAddress">Email</label><input class="form-control py-4" id="inputEmailAddress" type="email" aria-describedby="emailHelp" placeholder="Enter email address" /></div>
-                                            <div class="form-row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group"><label class="small mb-1" for="inputPassword">Password</label><input class="form-control py-4" id="inputPassword" type="password" placeholder="Enter password" /></div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group"><label class="small mb-1" for="inputConfirmPassword">Confirm Password</label><input class="form-control py-4" id="inputConfirmPassword" type="password" placeholder="Confirm password" /></div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group mt-4 mb-0"><a class="btn btn-primary btn-block" href="login.html">Create Account</a></div>
-                                        </form>
-                                    </div>
-                                    <div class="card-footer text-center">
-                                        <div class="small"><a href="register.html">Have an account? Go to login</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </main>
+    <body>
+<h1>Create new account</h1>
+    <form>
+    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+      <thead>
+        <tr>
+          <th class="mdl-data-table__cell--non-numeric">Segments</th>
+          <th><div class="material-icons mdl-badge mdl-badge--overlap" data-badge="♥">account_box</div></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Email</td>
+          <td>
+            <div class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="email" id="email">
+              <label class="mdl-textfield__label" for="email">Email...</label>
             </div>
-            <div id="layoutAuthentication_footer">
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2019</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+          </td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">Password</td>
+          <td>
+            <div class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="password" id="password">
+              <label class="mdl-textfield__label" for="password">...</label>
+              <span class="mdl-textfield__error"></span>
             </div>
-        </div>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
+          </td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">
+            <button id="sign-in" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+              Create
+            </button>
+          </td>
+          <td>
+            
+          </td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">
+            <a href="login.html">Already have account</a>
+          </td>
+          <td>
+            
+          </td>
+        </tr>
+        <tr>
+          <td class="mdl-data-table__cell--non-numeric">
+              Console:
+          </td>
+          <td>
+            <div class="panel panel-danger" id ="errors" style='display: none;'>       
+            </div>
+            <div class="panel panel-primary" id ="success" style='display: none;'>
+            </div>
+            <div class="col-xs-2"></div>
+            <div class="row"></div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  
+  <!--Configure firebase-->
+  <script>
+    // Visit https://console.firebase.google.com/project/<your project id>/overview and click on "Add Firebase to your web app"
+    // Initialize Firebase
+  var config = {
+    apiKey: 'AIzaSyBb3Rb_gbbnK1EGtnI3lA8Oxtd3WpTeMAM',
+    authDomain: 'map-population.firebaseapp.com',
+    databaseURL: 'https://map-population.firebaseio.com',
+    projectId: 'map-population',
+    storageBucket: 'map-population.appspot.com',
+    messagingSenderId: '298021600800'
+  };
+  firebase.initializeApp(config);
+ 
+  document.getElementById("sign-in").onclick = function(e) {
+    e.preventDefault();
+    handleSignUp();
+    
+  }
+ 
+  function handleSignUp() {
+    var errors = document.getElementById('errors');
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var warnings = "";
+ 
+    if (email.length < 4) {
+      warnings += 'You need a valid email chief <br/>';
+    }
+    if (password.length < 4) {
+      warnings += 'You need a valid password boss <br/>';
+    }
+ 
+    if (warnings != "") {
+      console.log(warnings);
+      errors.style.display = 'block';
+      errors.innerHTML = warnings;
+    } else {
+      errors.style.display = "none";
+      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+        errors.style.display = (errors.style.display === "none" || errors.style.display === "") ? "block" : "none";
+        console.log(error);
+        errors.innerHTML = error + "<br/>";
+      });
+    }
+  }
+ 
+  // Once a user is created with the email/login
+  // Notify when he/she is logged in
+  firebase.auth().onAuthStateChanged(user => {  
+    if (user) {
+ 
+      var fireBase_name = user.displayName;
+      var fireBase_email = user.email;
+ 
+      var fireBase_emailVerified = user.emailVerified;
+      var fireBase_uid = user.uid;
+      var success = document.getElementById('success');
+      success.style.display = (success.style.display === "none" || success.style.display === "") ? "block" : "none";
+      success.innerHTML = "User Logged in with Credentials: <br />" +
+        "<b>Name:</b> " + fireBase_name + "<br />" + 
+        "<b>Email: </b>" + fireBase_email + "<br />" + 
+        "<b>emailVerified: </b>" + fireBase_emailVerified + "<br />" + 
+        "<b>uid: </b>" + fireBase_uid + "<br />";
+        window.location.href = "index.html";
+    } 
+ 
+  });
+ 
+ 
+  firebase.auth().signOut().then(function() {
+    // Sign-out successful.
+  }, function(error) {
+    // An error happened.
+  });
+  </script>
     </body>
 </html>
