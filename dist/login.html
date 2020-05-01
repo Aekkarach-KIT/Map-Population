@@ -16,19 +16,19 @@
       <header class="mdl-layout__header mdl-layout__header--scroll">
         <div class="mdl-layout__header-row">
           <!-- Title -->
-          <span class="mdl-layout-title">Login</span>
+          <span class="mdl-layout-title">ลงชื่อเข้าใช้</span>
         </div>
       </header>
       <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Menu</span>
+        <span class="mdl-layout-title">เมนู</span>
         <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="register.html">Register</a>
+          <a class="mdl-navigation__link" href="register.html">สมัครสมาชิก</a>
         </nav>
       </div>
       <main class="mdl-layout__content">
         <div class="page-content" style="padding-top: 60px;" align="center">
           <!-- Your content goes here -->
-          <h1>Login to Admin</h1>
+          <h1>ลงชื่อเข้าใช้งาน</h1>
           <form>
             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
               <thead>
@@ -70,7 +70,7 @@
                         id="password"
                       />
                       <label class="mdl-textfield__label" for="password"
-                        >...</label
+                        >Password...</label
                       >
                       <span class="mdl-textfield__error"></span>
                     </div>
@@ -82,14 +82,14 @@
                       id="sign-in"
                       class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent"
                     >
-                      Submit
+                      ตกลง
                     </button>
                   </td>
                   <td></td>
                 </tr>
                 <tr>
                   <td class="mdl-data-table__cell--non-numeric">
-                    <a href="register.html">Create new Account</a>
+                    <a href="register.html">สร้างบัญชีใหม่</a>
                   </td>
                   <td></td>
                 </tr>
@@ -125,12 +125,14 @@
       // Visit https://console.firebase.google.com/project/<your project id>/overview and click on "Add Firebase to your web app"
       // Initialize Firebase
     var config = {
-      apiKey: 'AIzaSyBb3Rb_gbbnK1EGtnI3lA8Oxtd3WpTeMAM',
-      authDomain: 'map-population.firebaseapp.com',
-      databaseURL: 'https://map-population.firebaseio.com',
-      projectId: 'map-population',
-      storageBucket: 'map-population.appspot.com',
-      messagingSenderId: '298021600800'
+      apiKey: "AIzaSyDFfT0wOgA4ah6VG-mKQT4aMnyrElPC9AM",
+    authDomain: "map-project-93980.firebaseapp.com",
+    databaseURL: "https://map-project-93980.firebaseio.com",
+    projectId: "map-project-93980",
+    storageBucket: "map-project-93980.appspot.com",
+    messagingSenderId: "847070331829",
+    appId: "1:847070331829:web:b63b753c877491ae694ffc",
+    measurementId: "G-EB826YXJNM"
     };
     firebase.initializeApp(config);
    
@@ -148,10 +150,10 @@
     var warnings = "";
  
     if (email.length < 4) {
-      warnings += 'You need a valid email chief <br/>';
+      warnings += 'คุณใส่อีเมลล์ไม่ถูกต้อง <br/>';
     }
     if (password.length < 4) {
-      warnings += 'You need a valid password boss <br/>';
+      warnings += 'คุณใส่รหัสผ่านไม่ถูกต้อง <br/>';
     }
  
     if (warnings != "") {

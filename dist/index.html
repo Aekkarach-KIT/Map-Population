@@ -88,6 +88,24 @@
     @media only screen and (max-width: 300px) {
       .text {font-size: 11px}
     }
+
+    input.MyButton {
+width: 100px;
+padding: 10px;
+cursor: pointer;
+font-weight: bold;
+font-size: 70%;
+background: #3366cc;
+color: #fff;
+border: 1px solid #3366cc;
+margin-left: 90em;
+
+}
+input.MyButton:hover {
+color: white;
+background: red;
+border: 1px solid #fff;
+}
     </style>
        
 
@@ -101,6 +119,8 @@
   <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <a class="navbar-brand" href="index.html">Population Map</a><button class="btn btn-link btn-sm order-1 order-lg-0"
       id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button><!-- Navbar Search-->
+      <!--logout button-->
+      <input class="MyButton" type="button" value="ออกจากระบบ" onclick="window.location.href='login.html'" />
 
     <!-- Navbar-->
 
