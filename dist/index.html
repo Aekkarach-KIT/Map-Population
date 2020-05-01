@@ -15,7 +15,8 @@
   <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
-
+  
+  
 
   <!--slide-->
   <style>
@@ -93,7 +94,6 @@
 width: 100px;
 padding: 10px;
 cursor: pointer;
-font-weight: bold;
 font-size: 70%;
 background: #3366cc;
 color: #fff;
@@ -106,6 +106,21 @@ color: white;
 background: red;
 border: 1px solid #fff;
 }
+
+.select{
+  background-color: black;
+  font-size: medium;
+  color:wheat;
+  margin-top: 2em;
+  font-family: Century Gothic;
+  margin-bottom: 10em;
+  margin-left: 0.5em;
+}
+.upload{
+  margin-left: 0.5em;
+}
+
+
     </style>
        
 
@@ -119,8 +134,12 @@ border: 1px solid #fff;
   <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <a class="navbar-brand" href="index.html">Population Map</a><button class="btn btn-link btn-sm order-1 order-lg-0"
       id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button><!-- Navbar Search-->
+  
+      
+
       <!--logout button-->
       <input class="MyButton" type="button" value="ออกจากระบบ" onclick="window.location.href='login.html'" />
+
 
     <!-- Navbar-->
 
@@ -146,10 +165,41 @@ border: 1px solid #fff;
               ตาราง
             </a>
           </div>
-        </div>
+          <div>
+          <select class="select">
+            <optgroup label="อำเภอเมืองภูเก็ต">
+              <option>เกาะแก้ว</option>
+              <option>รัษฎา</option>
+              <option>วิชิต</option>
+              <option>ฉลอง</option>
+              <option>ราไวย์</option>
+              <option>กะรน</option>
+            </optgroup>
+            <optgroup label="อำเภอกะทู้">
+              <option>กะทู้</option>
+              <option>ป่าตอง</option>
+              <option>กมลา</option>
+            </optgroup>
+            <optgroup label="อำเภอถลาง">
+              <option>เทพกษัตรีย์</option>
+              <option>ศรีสุนทร</option>
+              <option>เชิงทะเล</option>
+              <option>ป่าคลอก</option>
+              <option>ไม้ขาว</option>
+              <option>สาคู</option>
+            </optgroup>
+          </select>
+          </div>
+          
+          
+       <!--Upload Files-->
+       <div class="upload"><button type="button" class="btn btn-success">Success</button></div>
+          
+       
 
       </nav>
     </div>
+    
     <div id="layoutSidenav_content">
 
       <div class="container-fluid">
