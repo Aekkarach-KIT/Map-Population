@@ -61,7 +61,7 @@
         "pug": "2.0.4",
         "run-sequence": "^2.2.1",
         "sass": "1.25.0",
-        "shelljs": "0.8.3",
+        "shelljs": "0.8.5",
         "tsify": "^4.0.1",
         "typescript": "^3.8.3",
         "vinyl-source-stream": "^2.0.0"
