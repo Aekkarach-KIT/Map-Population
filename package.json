@@ -47,7 +47,7 @@
         "@types/chart.js": "^2.9.20",
         "@types/node": "^13.13.4",
         "autoprefixer": "9.7.4",
-        "browser-sync": "2.26.7",
+        "browser-sync": "2.27.10",
         "chart.js": "^2.9.3",
         "chartjs-plugin-labels": "^1.1.0",
         "chokidar": "3.3.1",
